@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #D98F99 #DFE9EB;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #DFE9EB;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #B8C0C2;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #D98F99;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #D996B3;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #D98F99;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+  font-family: "Roboto";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, p, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: #FCFCFC;
+}
+
+button {
+  border: unset;
+  outline: none;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  background-image: url("../img/login_bg.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.login .login-box {
+  min-width: 360px;
+  max-width: 360px;
+  padding: 50px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(237, 237, 237);
+  border-radius: 15px;
+  background-color: #fff;
+}
+.login .login-box h1 {
+  font-family: Kanit;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 57px;
+  letter-spacing: 0em;
+  color: rgb(217, 143, 153);
+  margin-bottom: 30px;
+}
+.login .input {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgb(236, 236, 236);
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+.login .input #show {
+  cursor: pointer;
+}
+.login .input #show.active {
+  background-color: #f2f2f2;
+}
+.login .input .input-data {
+  padding: 12px 15px;
+  width: calc(100% - 50px);
+}
+.login .input.phone {
+  border-color: #C48A9F;
+}
+.login .input.phone input {
+  color: #C48A9F;
+}
+.login .input.phone input::-moz-placeholder {
+  color: rgba(196, 138, 159, 0.6235294118);
+}
+.login .input.phone input::placeholder {
+  color: rgba(196, 138, 159, 0.6235294118);
+}
+.login .input .icon {
+  height: 100% !important;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #C48A9F;
+  background-color: #FCFCFC;
+}
+.login .input .icon i {
+  color: #C48A9F;
+}
+.login input {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  padding: 0;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+}
+.login .btn {
+  margin-top: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px;
+  background: linear-gradient(90deg, #D98F99 0%, #C48A9F 97.92%);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.115em;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+}
+
+.head {
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  background: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(246, 246, 246);
+}
+.head .notify {
+  margin-right: 18px;
+  position: relative;
+}
+.head .notify span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  align-items: center;
+  background-color: #C48A9F;
+  color: #fff;
+  font-size: 12px;
+}
+.head .logo {
+  margin-left: 10px;
+  display: block;
+}
+.head .logo img {
+  display: block;
+  width: 80px;
+}
+.head .user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.head .user .name {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  align-items: flex-end;
+}
+.head .user .name p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  letter-spacing: 0em;
+  color: rgb(111, 111, 111);
+}
+.head .user .name span {
+  display: inline-block;
+  display: flex;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  color: rgb(179, 179, 179);
+}
+.head .user .icon span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  color: rgb(111, 111, 111);
+  border: 2px solid rgb(196, 138, 159);
+  border-radius: 8px;
+}
+
+.sidebar {
+  width: 230px;
+  height: calc(100vh - 70px);
+  overflow: hidden;
+  background-color: #fff;
+  border-right: 1px solid rgb(246, 246, 246);
+  padding: 25px 15px;
+}
+.sidebar .menu li.active a {
+  background: rgba(217, 143, 153, 0.1);
+}
+.sidebar .menu li a {
+  display: flex;
+  align-items: center;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0em;
+  color: rgb(114, 114, 114);
+  transition: 0.3s;
+  padding: 15px;
+  border-radius: 8px;
+}
+.sidebar .menu li a svg.lucide {
+  width: 18px !important;
+  height: 18px !important;
+}
+.sidebar .menu li a span {
+  display: inline-block;
+  margin-left: 5px;
+}
+.sidebar .menu li a:hover {
+  background: rgb(217, 143, 153);
+  color: #fff;
+}
+
+main {
+  display: flex;
+}
+
+.content {
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.content .bg {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("../img/login_bg.png");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.25;
+}/*# sourceMappingURL=main.css.map */
