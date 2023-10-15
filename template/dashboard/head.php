@@ -14,15 +14,21 @@
             
         </a>
         <div class="user">
-            <a href="" class="notify"><span>2</span><i data-lucide="bell"></i></a>
+            <a href="" class="notify"><?php
+            if($notify>0){
+                echo "<span>$notify</span>";
+            }
+            ?><i data-lucide="bell"></i></a>
             <div class="name">
-                <p>Akfa Med Clinics</p>
-                <span>organization</span>
+                <p><?=$h_name;?></p>
+                <span><?=$h_name_bot;?></span>
             </div>
             <div class="icon">
-                <span>AC</span>
+                <span><?=$ic;?></span>
             </div>
+            <a href="/?logout" class="logout"><i data-lucide="log-out"></i></a>
         </div>
+        
         
     </div>
     <main>

@@ -1,12 +1,13 @@
 <form class="login" method="POST">
-    <?php
-        if(isset($mess)){
-            echo "<p>{$mess['message']}</p>";
-        }
-    ?>
+    
     <input type="hidden" value="pacient" name="type">
     <div class="login-box">
         <h1>TibNet</h1>
+        <?php
+        if(isset($mess)){
+            echo "<div class='alert {$mess['type']}' ><p>{$mess['message']}</p></div>";
+        }
+    ?>
         <div class="input phone">
             <div class="icon">
                 <i data-lucide="phone"></i>

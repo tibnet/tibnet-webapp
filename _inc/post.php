@@ -30,7 +30,7 @@ if(isset($_POST['sign'])){
       } else {
         $mess = [
             "type" => "error",
-            "text" => "Xatolik!"
+            "message" => "Xatolik!"
         ];
       }
 
@@ -49,7 +49,7 @@ if(isset($_POST['sign'])){
         } else {
           $mess = [
               "type" => "error",
-              "text" => $res['message']
+              "message" => $res['message']
           ];
         }
     }
@@ -61,9 +61,11 @@ if(isset($_POST['verificationId'])){
     if($res['success']){
         $_SESSION['sign'] = $res;
     } else {
+        $page = "verify";
+        $verificationId = $res['verificationId'];
         $mess = [
             "type" => "error",
-            "text" => "Xatolik!"
+            "message" => "Kod noto'g'ri!"
         ];
     }
 }

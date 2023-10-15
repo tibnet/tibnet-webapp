@@ -35,7 +35,7 @@
   *::-webkit-scrollbar-thumb:active {
     background-color: #D98F99;
   }
-h1,h2,h3,h4,h5,h6,p,span,a{
+h1,h2,h3,h4,h5,h6,p,span,a,label{
     font-family: "Roboto";
 }
 *{
@@ -219,6 +219,9 @@ a{
         display: flex;
         align-items: center;
         justify-content: center;
+        .logout{
+            margin-left: 10px;
+        }
         
         .name{
             display: flex;
@@ -317,6 +320,7 @@ main{
     width: 100%;
     position: relative;
     z-index: 1;
+    padding:25px 15px;
     .bg{
         z-index: -1;
     position: absolute;
@@ -327,5 +331,93 @@ main{
     background-size: cover;
     background-attachment: fixed;
     opacity: 0.25;
+    }
+}
+.col-4{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:20px;
+    >div{
+        border: 1px solid rgba(246, 246, 246, 1);
+        background-color: #fff;
+    }
+}
+.alert{
+    margin-bottom: 20px;
+    padding:20px;
+    border-radius: 8px;
+    p{
+        font-size: 15px;
+        color:#fcfcfc;
+
+    }
+    &.error{
+        background-color: rgba(224, 57, 57, 0.5);
+    }
+}
+.searchform{
+    background-color: rgba(255,255,255,1);
+    border-radius: 8px;
+    padding:25px;
+    border: 1px solid rgba(246, 246, 246, 1);
+    label{
+        display: block;
+        margin-bottom: 8px;
+    }
+    .search{
+        .result{
+            background-color: #ffffff;
+            width: 100%;
+            position: absolute;
+            top:100%;
+            left: 0;
+            display: none;
+            li{
+                &:hover{
+                    a{
+                        background-color: #C48A9F;
+                        color:#fff;
+                    }
+                }
+                a{
+                    display: block;
+                    width: 100%;
+                    padding:15px;
+                    font-size: 15px;
+                    color:#D98F99;
+                }
+                
+                &:not(:last-child){
+                    border-bottom:1px solid rgba(246, 246, 246, 1);
+                }
+            }
+        }
+        position: relative;
+        .in{
+        overflow:hidden;
+        border-radius: 8px;
+        border: 1px solid rgba(236, 236, 236, 1);
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        
+            input{
+                font-family: Roboto;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 15px;
+            letter-spacing: 0em;
+            padding:0;
+            border: none;
+            outline: none;
+            display: block;
+            width: 100%;
+            padding:15px;
+            /*width: calc(100% - 50px);*/
+            }
+        }
     }
 }

@@ -21,11 +21,21 @@ curl_close($curl);
 
 return json_decode($json_response, true);
 }
-function sendGet($url,$params){
-    foreach($params as $k=>$v){
-        $param[] = "$k=$v";
+function sendGet($url,$params = [],$token=""){
+    $opts = [
+        "http" => [
+            "method" => "GET",
+            "header" => "Authorization: $token\r\n"
+        ]
+    ];
+    $context = stream_context_create($opts);
+    $get = "";
+    if(count($params)>0){
+        foreach($params as $k=>$v){
+            $param[] = "$k=$v";
+        }
+        $get = "?".implode("&",$param);
     }
-    $params = implode("&",$param);
-    return json_decode(file_get_contents("$url/?$params"),true);
+    return json_decode(file_get_contents("$url/$get",false,$context),true);
 }
 ?>

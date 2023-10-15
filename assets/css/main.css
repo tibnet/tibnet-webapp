@@ -37,7 +37,7 @@
   background-color: #D98F99;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a {
+h1, h2, h3, h4, h5, h6, p, span, a, label {
   font-family: "Roboto";
 }
 
@@ -230,6 +230,9 @@ a {
   align-items: center;
   justify-content: center;
 }
+.head .user .logout {
+  margin-left: 10px;
+}
 .head .user .name {
   display: flex;
   flex-direction: column;
@@ -315,6 +318,7 @@ main {
   width: 100%;
   position: relative;
   z-index: 1;
+  padding: 25px 15px;
 }
 .content .bg {
   z-index: -1;
@@ -326,4 +330,88 @@ main {
   background-size: cover;
   background-attachment: fixed;
   opacity: 0.25;
+}
+
+.col-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.col-4 > div {
+  border: 1px solid rgb(246, 246, 246);
+  background-color: #fff;
+}
+
+.alert {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.alert p {
+  font-size: 15px;
+  color: #fcfcfc;
+}
+.alert.error {
+  background-color: rgba(224, 57, 57, 0.5);
+}
+
+.searchform {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 25px;
+  border: 1px solid rgb(246, 246, 246);
+}
+.searchform label {
+  display: block;
+  margin-bottom: 8px;
+}
+.searchform .search {
+  position: relative;
+}
+.searchform .search .result {
+  background-color: #ffffff;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+.searchform .search .result li:hover a {
+  background-color: #C48A9F;
+  color: #fff;
+}
+.searchform .search .result li a {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 15px;
+  color: #D98F99;
+}
+.searchform .search .result li:not(:last-child) {
+  border-bottom: 1px solid rgb(246, 246, 246);
+}
+.searchform .search .in {
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid rgb(236, 236, 236);
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+}
+.searchform .search .in input {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  padding: 0;
+  border: none;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  /*width: calc(100% - 50px);*/
 }/*# sourceMappingURL=main.css.map */
