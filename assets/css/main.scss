@@ -92,6 +92,16 @@ a{
             color:rgba(217, 143, 153, 1);
             margin-bottom: 30px;
         }
+        >div{
+            width: 100%;
+        }
+    }
+    small{
+        width: 100%;
+        font-family: "Roboto";
+        color:#C48A9F;
+        font-size: 11px;
+        display: block;
     }
     .input{
         overflow:hidden;

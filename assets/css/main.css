@@ -104,6 +104,16 @@ a {
   color: rgb(217, 143, 153);
   margin-bottom: 30px;
 }
+.login .login-box > div {
+  width: 100%;
+}
+.login small {
+  width: 100%;
+  font-family: "Roboto";
+  color: #C48A9F;
+  font-size: 11px;
+  display: block;
+}
 .login .input {
   overflow: hidden;
   border-radius: 8px;

@@ -2,12 +2,38 @@
         $lenght = $("#phone").val().length 
         //alert("Ok")
         if($lenght==12){
-            //alert("Ok")
+            
             $phone = $("#phone").val()
-            $("#pass").show()
-            $("#reg").show()
-
-            $("#sign_up").show()
+            $.ajax({
+                type: "POST",
+                url: "/_ajax.php",
+                data: { checkPhone: $phone},
+                cache: false,
+                success: function(responce){ 
+                    $mes = responce
+                    if($mes=="ok"){
+                        $("#pass").show()
+                        $("#sign_in").show()
+                    } else if($mes=="reg"){
+                        $("#passhelp").show()
+                        $("#pass").show()
+                        $("#reg").show()
+            
+                        $("#sign_up").show()
+                        
+                    } 
+                    else {
+                        alert("Tizim xatoligi:"+ responce)
+                    }
+                }
+        });
+            
+        } else {
+            $("#pass").hide()
+            $("#reg").hide()
+            $("#sign_in").hide()
+            $("#sign_up").hide()
+            $("#passhelp").hide()
         }
     })
 $("#show").click(function(){
